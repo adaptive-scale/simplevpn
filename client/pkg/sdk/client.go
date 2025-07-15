@@ -131,23 +131,6 @@ func runEmbeddedClient(serverIP string, serverPort int, serverPubKey string, cli
 		log.Printf("Assigned IP %s to interface %s", ipAddr, ifName)
 	}
 
-	// Set default gateway to the WireGuard server's IP
-	if runtime.GOOS == "linux" {
-		err := exec.Command("ip", "route", "replace", "default", "via", serverIP, "dev", ifName).Run()
-		if err != nil {
-			log.Printf("Failed to set default gateway on Linux: %v", err)
-		} else {
-			log.Printf("Set default gateway to %s on %s (Linux)", serverIP, ifName)
-		}
-	} else if runtime.GOOS == "darwin" {
-		err := exec.Command("route", "change", "default", serverIP).Run()
-		if err != nil {
-			log.Printf("Failed to set default gateway on macOS: %v", err)
-		} else {
-			log.Printf("Set default gateway to %s (macOS)", serverIP)
-		}
-	}
-
 	// Add routes to send all traffic via the tunnel, without replacing the default route
 	switch runtime.GOOS {
 	case "linux":
