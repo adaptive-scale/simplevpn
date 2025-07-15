@@ -1,4 +1,4 @@
-module github.co/adaptive-scale/simplevpn
+module github.com/adaptive-scale/simplevpn
 
 go 1.23.1
 

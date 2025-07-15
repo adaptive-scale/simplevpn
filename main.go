@@ -83,8 +83,12 @@ func main() {
 	subnetFlag := flag.String("subnet", "10.0.0.0/24", "Tunnel subnet (CIDR)")
 	flag.Parse()
 
-	// Ensure .simplevpn dir and keys
-	keyDir := ".simplevpn"
+	// Ensure $HOME/.simplevpn dir and keys
+	homeDir, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatalf("failed to get user home directory: %v", err)
+	}
+	keyDir := filepath.Join(homeDir, ".simplevpn")
 	_, pubKey, created, err := ensureKeys(keyDir)
 	if err != nil {
 		log.Fatalf("failed to ensure server keys: %v", err)

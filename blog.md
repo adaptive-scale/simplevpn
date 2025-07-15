@@ -1,5 +1,7 @@
 # SimpleVPN: Your Minimal, Modern, and Hackable WireGuard VPN in Go!
 
+[View on GitHub](https://github.com/adaptive-scale/simplevpn)
+
 Are you ready to take control of your privacy, learn about modern VPN technology, and hack on a real-world networking project? Meet **SimpleVPN**—a minimal, developer-friendly VPN server and client built in Go, powered by the blazing-fast and secure WireGuard protocol!
 
 ---
@@ -138,6 +140,21 @@ flowchart TD
 
 ---
 
+## 🌟 Why Did We Choose WireGuard?
+
+WireGuard is the newest major VPN protocol, and it’s quickly become the gold standard for secure, fast, and modern VPNs. Here’s why SimpleVPN is built on WireGuard:
+
+- **Simplicity:** WireGuard’s codebase is tiny compared to OpenVPN or IPSec, making it easier to audit, maintain, and extend. This fits perfectly with SimpleVPN’s philosophy of minimalism and hackability.
+- **Speed:** WireGuard is designed for performance. It uses state-of-the-art cryptography and is highly efficient, often outperforming older VPN protocols in both throughput and latency.
+- **Modern Cryptography:** WireGuard uses only the latest, safest cryptographic primitives (like Curve25519, ChaCha20, Poly1305, BLAKE2s, and HKDF). No legacy or outdated algorithms.
+- **Cross-Platform:** WireGuard runs on Linux, macOS, Windows, Android, iOS, and even routers. This makes it a great foundation for a modern, portable VPN.
+- **Developer-Friendly:** The protocol is easy to understand, and the Go userspace implementation is clean and approachable. This makes it ideal for learning, teaching, and rapid prototyping.
+- **Security by Design:** WireGuard’s small attack surface and focus on secure defaults make it a favorite among security professionals and privacy advocates.
+
+**In short:** WireGuard is the VPN protocol for the next decade—simple, fast, secure, and a joy to build on. That’s why it’s at the heart of SimpleVPN!
+
+---
+
 ## 🏁 Getting Started
 
 1. **Clone the repo and build:**
@@ -178,5 +195,7 @@ SimpleVPN is intentionally minimal, but there are many exciting directions for f
 ## 🙌 Join the Fun!
 
 SimpleVPN is open source and ready for your ideas. Fork it, star it, and share what you build. Whether you’re a privacy enthusiast, a Go developer, or just VPN-curious, SimpleVPN is your ticket to the world of modern, hackable VPNs.
+
+**GitHub:** [https://github.com/adaptive-scale/simplevpn](https://github.com/adaptive-scale/simplevpn)
 
 **Happy tunneling!** 

@@ -1,0 +1,14 @@
+flowchart TD
+    subgraph Client
+        C1["TUN Interface (10.0.0.2)"]
+        C2["WireGuard (userspace)"]
+    end
+    subgraph Server
+        S1["TUN Interface (10.0.0.1)"]
+        S2["WireGuard (userspace)"]
+    end
+    C1 <--> C2
+    S1 <--> S2
+    C2 -- Encrypted UDP (51820) --> S2
+    S2 -- Encrypted UDP (51820) --> C2
+    C1 -- Private traffic --> S1
