@@ -1,0 +1,28 @@
+# Binaries and build output
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Key files and secrets
+.simplevpn/
+
+# Go build cache and modules
+go.sum
+*.out
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Coverage
+coverage.out 

@@ -1,0 +1,13 @@
+flowchart LR
+    subgraph Client
+        A["Your Device"]
+        B["VPN Software"]
+    end
+    subgraph Server
+        D["VPN Server"]
+        E["Private Network or Internet"]
+    end
+    A -- Plain traffic --> B
+    B -- Encrypted Tunnel --> D
+    D -- Plain traffic --> E
+    B -. Public Internet .-> D
